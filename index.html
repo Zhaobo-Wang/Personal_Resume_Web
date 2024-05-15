@@ -1,54 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhaobo Wang's Resume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
+        <div class="navbar">
+            <a href="#courses">Courses</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#life">Life</a>
+        </div>
         <h1>Zhaobo Wang</h1>
-        <p>Email: <a href="mailto:wangzhaobowork@gmail.com">wangzhaobowork@gmail.com</a> | Phone: 18646312137 | Website: <a href="https://www.jimbowang.space">jimbowang.space</a></p>
+        <p>Email: <a href="mailto:wangzhaobowork@gmail.com">wangzhaobowork@gmail.com</a> | Phone: 18646312137 | Website:
+            <a href="https://www.jimbowang.space">jimbowang.space</a></p>
     </header>
-    <section class="education">
-        <h2>Education</h2>
-        <p>University of Hong Kong, Master of Engineering in Electrical and Electronics Engineering</p>
-        <p>McMaster University, Bachelor of Engineering in Electrical and Computer Engineering</p>
-        <ul>
-            <li>Related Coursework: Python/C/C++ Programming, Computer Operating Systems, Software Design, and more...</li>
-        </ul>
+    <section id="about">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+            <img src="favicon.jpg" style="width: 15%; height: 20%; margin-right: 5%; border-radius: 10%; ">
+            <div>
+                <div class="typing-effect">Hi, I'm Zhaobo Wang!</div>
+                <p> I am currently a <b>Master's student</b> in <b>Electrical and Electronics Engineering</b> at <b>University of Hong Kong</b>,
+                    expected to graduate in November 2025.</p>
+                <p> I obtained my B.ENG. with Distinction in <b>Electrical and Computer Engineering</b> at <b>McMaster University</b> in Canada </p>
+                <p>Connect with me on <a href="https://linkedin.com/in/junbowang16">LinkedIn</a> and email me at <a
+                    href="mailto:wangj430@mcmaster.ca">wangzhaobowork@gmail.com</a> !</p>
+            </div>
+        </div>
     </section>
-    <section class="experience">
-        <h2>Work Experience</h2>
-        <div>
-            <h3>Research Assistant - HIT University, Department of Computing</h3>
-            <p>May – August 2023</p>
+    <div class="container">
+        <section class="courses" id="courses">
+            <h2>Courses</h2>
             <ul>
-                <li>Research Focus: Extensive experience in wireless sensor networks (WSN).</li>
-                <!-- More items here -->
+                <li>Related Coursework: Python/C/C++ Programming, Computer Operating Systems, Software Design, Computer Networks, Web
+                    Architecture, Machine Learning, Embedded System, Algorithm and Data Structures</li>
+                <li><b>Math + CS Theory</b>: MATH51, MATH52, MATH113, MATH115, CS103, CS109, CS154, CS361, CS161, CS205L</li>
+                <li><b>Human-Computer Interaction</b>: CS193X, CS47, CS278</li>
+                <li>Self Learned: Stanford CS 229/ CS230/ CS231n/CS 224n, Full Stack Web Development</li>
             </ul>
-        </div>
-        <div>
-            <h3>Software Developer IXP Intern - SAP</h3>
-            <p>March – August 2022</p>
+        </section>
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
             <ul>
-                <li>Spearheaded the adoption of Scrum methodology in .NET development.</li>
-                <!-- More items here -->
+                <li><b>Languages:</b> Fluent in English and Chinese (verbal and writing)</li>
+                <li>Skilled in <b>Reproducing Research finding</b> and <b>replicating GitHub repo projects</b> </li>
+                <li><b>Coding Languages:</b> Python(NumPy/SciPy/Pytorch), JavaScript, C, C++, HTML, CSS</li>
+                <li><b>Frameworks:</b> React.js, Vue.js, Bootstrap, Express.js, Node.js, Django Rest Framework</li>
+                <li><b>Database Technologies:</b> MongoDB, SQL</li>
+                <li><b>Development Tools:</b> Git, Docker, Chrome Dev Tools, Figma, Postman, Visual Studio Code, Visual Studio</li>
+                <li><b>Cloud and Operations:</b> AWS, Linux, Heroku, JIRA</li>
+                <li><b>Hardware Description Language:</b> Verilog</li>
+                <li><b>Data Analysis Tools:</b> Power BI, MATLAB</li>
+                <li><b>Certifications:</b> <a
+                        href="https://github.com/JimboWangSAP/Application/blob/main/SAS%20Certified%20Specialist_%20Base%20Programming%20Using%20SAS%209.4%20certificate%20(1).pdf">SAS
+                        Certified Specialist</a></li>
             </ul>
-        </div>
-    </section>
-    <section class="projects">
-        <h2>Projects</h2>
-        <div>
-            <h3><a href="https://github.com/Zhaobo-Wang/Capstone_Strawberry_Detect/blob/main/README.md">AI-Driven Agricultural
-            Monitoring System</a></h3>
-            <!-- Project description -->
-        </div>
-        <!-- More projects here -->
-    </section>
+        </section>
+    </div>
+    <div class="container-column">
+        <section class="experience" id="experience">
+            <h2>Work Experience</h2>
+            <div>
+                <h3>Research Assistant - HIT University, Department of Computing</h3>
+                <p>May – August 2023</p>
+                <ul>
+                    <li>Research Focus: Extensive experience in wireless sensor networks (WSN) utilized in diverse
+                        applications where real-time data collection from objects and environments is essential.</li>
+                    <li>Challenges Addressed: Demonstrated ability to tackle challenges commonly faced in WSN applications,
+                        such as data aggregation, scheduling, collision management, and efficient channel and time slot
+                        utilization.</li>
+                    <li>Greedy Algorithm Expertise: Introduced a pioneering greedy algorithm for wireless sensor networks,
+                        emphasizing maximum node scheduling within specific time slots, leading to superior performance
+                        compared to traditional dynamic programming and naive algorithms.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Software Developer IXP Intern - SAP</h3>
+                <p>March – August 2022</p>
+                <ul>
+                    <li>Spearheaded the adoption of Scrum methodology in .NET development, optimizing team collaboration and
+                        project delivery.</li>
+                    <li>Enhanced the user experience of Cockpit Cloud Page by implementing critical features. Added select
+                        all dialog and pagination functions for handling of large datasets.</li>
+                    <li>Solved over 30 cases of automated integrated test failures. Conducted root cause analyses,
+                        collaborated with development teams.</li>
+                    <li>Fixed 7 bugs related to Cockpit importing database failure, Assisted SP15 Hana Patch Release.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>McMaster University</h3>
+                  <ul>
+                    <li>Course Assistant [Spring 2023] - MATH 1ZA3: Engineeering Mathematics I</li>
+                    <li>Course Assistant [Winter 2024] - COMPENG 2SH4: Principal Programming</li>
+                  </ul>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div>
+                <h3><a href="https://github.com/Zhaobo-Wang/Capstone_Strawberry_Detect/blob/main/README.md">AI-Driven
+                    Agricultural Monitoring System</a></h3>
+                <p>Leveraged a YOLOv8 deep learning model to differentiate between healthy / moldy strawberries; training on
+                    a dataset of 3225 annotated images to ensure high precision and recall across multiple classes; the
+                    system automatically initiates real-time irrigation based on health detection via COM serial
+                    communication to Raspberry Pi</p>
+                <p>Implemented a high-performance real-time video processing system for strawberry detection, utilizing
+                    OpenCV and Python; Ensuring optimal crop conditions by continuously updating and displaying the latest
+                    data and status through a video monitoring interface; Developed a responsive front-end interface,
+                    integrating WebSocket communication to ensure seamless real-time data transfer between the backend and
+                    frontend, facilitating immediate updates and interactive user engagement.</p>
+            </div>
+            <!-- More projects can be added here -->
+        </section>
+    </div>
     <footer>
         <p>© 2024 Zhaobo Wang. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
