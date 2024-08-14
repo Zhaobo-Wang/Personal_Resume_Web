@@ -1,7 +1,9 @@
+/* 引入字体 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* 全局样式 */
 body {
     margin: 0;
     font-family: 'Urbanist', sans-serif;
@@ -9,6 +11,16 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* 禁止水平滚动 */
+}
+
+.main-content {
+    flex: 1;
+    /* 让内容占据页面的剩余高度，确保页脚在页面底部 */
 }
 
 header,
@@ -17,6 +29,7 @@ footer {
     font-family: 'Noto Serif', serif;
 }
 
+/* 导航栏样式 */
 .navbar {
     display: flex;
     justify-content: center;
@@ -38,6 +51,7 @@ footer {
     color: #007bff;
 }
 
+/* 头部样式 */
 header {
     background-color: white;
     min-height: 10vh;
@@ -56,6 +70,7 @@ section#about img {
     margin-right: 5%;
 }
 
+/* 主体样式 */
 .main {
     margin-left: 10%;
     margin-right: 10%;
@@ -63,6 +78,7 @@ section#about img {
     padding-right: 10%;
 }
 
+/* 打字效果 */
 .typing-effect {
     overflow: hidden;
     border-right: .15em solid pink;
@@ -93,6 +109,7 @@ section#about img {
     }
 }
 
+/* 内容容器样式 */
 .container {
     display: flex;
     flex-direction: row;
@@ -119,6 +136,7 @@ section:hover {
     transform: translateY(-3px);
 }
 
+/* 列表容器样式 */
 .container-column {
     display: flex;
     flex-direction: column;
@@ -129,22 +147,28 @@ section:hover {
     margin: 20px;
 }
 
-
-
+/* 文本样式 */
 p,
 li {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 
+/* 页脚样式 */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
     color: #fff;
-    margin-top: 10rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    /* 确保定位正常 */
+    left: 0;
+    bottom: 0;
 }
 
+/* 分隔线样式 */
 .line {
     height: 1px;
     background-color: lightslategray;
@@ -153,6 +177,7 @@ footer {
     margin-right: auto;
 }
 
+/* 表格样式 */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -173,10 +198,12 @@ td {
     width: auto;
 }
 
+/* 无序列表样式 */
 ul {
     padding-left: 20px;
 }
 
+/* 项目部分样式 */
 .projects {
     margin-top: 40px;
 }
@@ -214,13 +241,164 @@ ul {
 
 .project-image {
     flex: 1.5;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .project-image img {
     width: 100%;
-    height: 280px;
-    /* 固定图片的高度 */
+    height: 330px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container-column {
+        margin: 10px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    header {
+        font-size: calc(8px + 2vmin);
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-description {
+        padding-right: 0;
+    }
+
+    .project-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    header {
+        font-size: calc(8px + 1.5vmin);
+    }
+
+    .about-img,
+    section#about img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* 隐藏导航栏 */
+    .navbar {
+        display: none;
+    }
+
+    /* 调整头像尺寸 */
+    .about-img,
+    section#about img {
+        width: 120px;
+        /* 增大图片尺寸 */
+        height: auto;
+        margin: 15px auto 0 auto;
+        display: block;
+        border-radius: 50%;
+    }
+
+    section#about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Email, Phone 信息居中 */
+    header p {
+        text-align: center;
+    }
+
+    /* Courses 标题居中 */
+    .courses h2 {
+        text-align: center;
+    }
+
+    .container,
+    .container-column {
+        margin: 0 auto;
+        padding: 0 10px;
+        /* 为左右增加相等的内边距 */
+        max-width: 100%;
+        /* 确保容器宽度不会超过屏幕 */
+        box-sizing: border-box;
+        /* 使内边距计算在宽度内 */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .project-description h3 {
+        font-size: 20px;
+    }
+
+    .project-description p {
+        font-size: 14px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td,
+    table ul,
+    table li {
+        font-size: 12px !important;
+        /* 强制应用12px字体大小 */
+    }
+
+    th,
+    td {
+        padding: 5px !important;
+        /* 强制减少单元格内边距 */
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 10px;
+        list-style-position: inside;
+    }
+
 }
